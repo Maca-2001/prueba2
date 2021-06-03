@@ -44,55 +44,120 @@
       <h1>preguntas frecuentes</h1>
       <br>
       <br>
-
-      <div class="accordion" id="accordionExample">
-        <div class="card">
-          <div class="card-header" id="headingOne">
-            <h2 class="mb-0">
-              <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                Collapsible Group Item #1
-              </button>
-            </h2>
-          </div>
-      
-          <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-            <div class="card-body">
-              Some placeholder content for the first accordion panel. This panel is shown by default, thanks to the <code>.show</code> class.
-            </div>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-header" id="headingTwo">
-            <h2 class="mb-0">
-              <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                Collapsible Group Item #2
-              </button>
-            </h2>
-          </div>
-          <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-            <div class="card-body">
-              Some placeholder content for the second accordion panel. This panel is hidden by default.
-            </div>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-header" id="headingThree">
-            <h2 class="mb-0">
-              <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                Collapsible Group Item #3
-              </button>
-            </h2>
-          </div>
-          <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-            <div class="card-body">
-              And lastly, the placeholder content for the third and final accordion panel. This panel is hidden by default.
-            </div>
-          </div>
-        </div>
+      <form>
+      <center><a class="btn btn-danger" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button"
+      aria-expanded="false" aria-controls="multiCollapseExample1"> ¿Qué direcciones de correos electrónicos son válidas para registrar en el FUAS?</a>
+    </div>
+  </div>
+</div>
+<div class="col">
+  <div class="collapse multi-collapse" id="multiCollapseExample1">
+      <div class="card card-body">
+        Son válidas las cuentas de correo electrónico que antes y después de “@” tengan letras desde la “a” a la “z” o un número del 1 al 9
       </div>
+  </div>
+</div>
+<div>
+<div>
+  <button class="btn btn-danger" type="button" data-bs-toggle="collapse"
+      data-bs-target="#multiCollapseExample2" aria-expanded="false"
+      aria-controls="multiCollapseExample2">Al tratar de generar mi usuario en FUAS, tengo problemas con mi dominio ¿Cuál es la forma correcta?</button>
+  <div class="collapse multi-collapse" id="multiCollapseExample2">
+      <div class="card card-body">
+        Algunos ejemplos de dominios correctos para ingresar al FUAS son: gmail.com; live.cl; hotmail.cl o hotmail.com.
+      </div>
+  </div>
+</div>
+<div>
+<div>
+  <button class="btn btn-danger" type="button" data-bs-toggle="collapse"
+      data-bs-target="#multiCollapseExample3" aria-expanded="false"
+      aria-controls="multiCollapseExample3">¿Qué debo hacer si no vivo con uno de mis padres?</button>
+  <div class="collapse multi-collapse" id="multiCollapseExample3">
+      <div class="card card-body">
+        No debes incluirlo como integrante de tu grupo familiar, pero si este otorga alguna pensión alimenticia o hace algún aporte, ese monto debe ser incorporado como ingreso. <br>
+        Puntualmente, si se trata de un aporte convenido entre los padres, debes incluir ese monto en la columna Pensión Alimenticia.
+      </div>
+  </div>
+</div>
+</div>
+</div>
+<button class="btn btn-danger" type="button" data-bs-toggle="collapse"
+data-bs-target="#multiCollapseExample4" aria-expanded="false"
+aria-controls="multiCollapseExample4">Si, por razones de estudio, viviré en una ciudad distinta de la que resido actualmente ¿Qué dirección ingreso?</button>
+<div class="collapse multi-collapse" id="multiCollapseExample4">
+<div class="card card-body">
+  Si sigues dependiendo económicamente de tus padres, debes registrar la dirección donde reside tu grupo familiar.<br>
+ 
+  Si ya eres económicamente independiente, entonces debes indicar la dirección donde tú residirás.
+</div>
+</div>
+</div>
+<div>
+  <button class="btn btn-danger" type="button" data-bs-toggle="collapse"
+  data-bs-target="#multiCollapseExample5" aria-expanded="false"
+  aria-controls="multiCollapseExample5">¿Cómo debo informar los ingresos de mi grupo familiar en el FUAS?</button>
+<div class="collapse multi-collapse" id="multiCollapseExample5">
+  <div class="card card-body">
+    Para declarar los ingresos de 2019 deberás sumar los ingresos percibidos por tu grupo familiar durante todo ese año y dividirlos por 12.<br>
+ 
+Para declarar los ingresos de 2020 deberás sumar los ingresos percibidos por tu grupo familiar durante todo ese año y dividirlos por 12.<br>
+ 
+Para mayor información en relación con esta pregunta, te recomendamos que revises el Instructivo de llenado.
+  </div>
+</div>
+</div>
+<div>
+  <button class="btn btn-danger" type="button" data-bs-toggle="collapse"
+  data-bs-target="#multiCollapseExample6" aria-expanded="false"
+  aria-controls="multiCollapseExample6">Si, por razones de estudio, viviré en una ciudad distinta de la que resido actualmente ¿Qué dirección ingreso?</button>
+<div class="collapse multi-collapse" id="multiCollapseExample6">
+  <div class="card card-body">
+    Si sigues dependiendo económicamente de tus padres, debes registrar la dirección donde reside tu grupo familiar.<br>
+ 
+    Si ya eres económicamente independiente, entonces debes indicar la dirección donde tú residirás.
+  </div>
+</div>
+</div>
+<div>
+  <button class="btn btn-danger" type="button" data-bs-toggle="collapse"
+  data-bs-target="#multiCollapseExample7" aria-expanded="false"
+  aria-controls="multiCollapseExample7">¿Cómo me aseguro que los datos ingresados en el FUAS fueron enviados?</button>
+<div class="collapse multi-collapse" id="multiCollapseExample7">
+  <div class="card card-body">
+    Revisando el comprobante que genera el sistema. Una vez que recibes en tu correo electrónico el comprobante de inscripción, significa que tu inscripción finalizó exitosamente.
+  </div>
+</div>
+</div>
+<div>
+  <button class="btn btn-danger" type="button" data-bs-toggle="collapse"
+  data-bs-target="#multiCollapseExample8" aria-expanded="false"
+  aria-controls="multiCollapseExample8">¿Puedo ingresar mis datos en la plataforma de inscripción FUAS fuera del plazo establecido?</button>
+<div class="collapse multi-collapse" id="multiCollapseExample8">
+  <div class="card card-body">
+    No, porque el formulario de inscripción sólo estará disponible en el sitio web www.fuas.cl durante el periodo establecido por el Ministerio de Educación. 
+    Una vez desactivado el sitio, ya no podrás ingresar.<br>
+ 
+    Para mayor información de las fechas y los horarios de inicio y término del periodo de inscripción, puedes revisar la página www.fuas.cl.
+</div>
+</div>
+<div>
+</div>
+</div>
+<div>
+</div>
+</form></center>
+   <!-- Optional JavaScript; choose one of the two! -->
 
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+    -->
   </body>
 </html>

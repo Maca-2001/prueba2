@@ -4,15 +4,21 @@ h1{
     
 }
 
-h2{   font-style:italic;
+h2{   font-style:normal;
       font-weight:bold;
-      font-size:1.2em;
+      font-size: 100%;
       font-color:#000000;
-      font-family:'Helvetica','Verdana','Monaco',sans-serif;
+      font-family: monospace;
 
 }
 
 h1{
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: sans-serif;
     color: rgb(0, 0, 0);
+}
+
+form button {
+    border: black 1px solid;
+    width: 80%;
+    background-color:#000000;
 }
