@@ -1,0 +1,162 @@
+H3{
+    text-align:center;
+    padding-bottom: 20px;
+    padding-top:50px;   
+}
+
+h4{   
+
+    margin-left: 20px;
+}
+
+#fondo{
+
+    background: linear-gradient(to right, rgba(224, 84, 84, 0.7), rgba(189, 217, 255, 0.7));
+    border-radius: 0.5cm;
+    padding-bottom: 25px;
+    padding-top:10px;
+    margin-top:20px;
+}
+
+#margen{
+
+    padding-top: 10px;
+    padding-bottom: 25px;
+}
+
+
+#label{
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+
+#label2{
+    padding-bottom: 0px;
+    margin-bottom: 25px;
+}
+
+#margen-radio{
+
+    margin-left: 25px;
+}
+
+#rec-1{
+
+    padding-right: 165px;
+}
+#rec-2{
+
+    padding-right: 165px;
+}
+#rec-3{
+
+    padding-right: 165px;
+}
+
+#text-4,#text-5,#text-6{
+
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+
+#ol1,#ol2,#ol3,#ol4,#ol5,#ol6{
+    margin-top: 10px;
+    padding-top: 0px;
+    
+}
+
+#marg{
+    
+    padding-top: 30px;
+    padding-bottom: 50px;
+}
+
+.TB{
+
+    text-align: center;
+}
+
+#ola2{
+
+    padding-left: 40px;
+    margin-top:10px
+}
+
+
+
+#margen2{
+
+    padding-top: 10px;
+}
+
+#text-7,#text-8,#text-9,#text-10{
+
+    margin-top: 30px;
+}
+#text-11,#text-12,#text-13{
+
+    margin-top: 30px;
+}
+#text-14,#text-15,#text-16{
+
+    margin-top: 30px;
+}
+
+label.error {
+    color: red;
+    font-size: 1rem;
+    display: block;
+    margin-top: 5px;
+}
+
+#estadocivil{
+
+    margin-left: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#rut-1{
+
+    margin-top: 10px;
+    margin-bottom: 1px;
+}
+
+#ol25,#ol26,#ol27,#ol28,#ol29{
+
+    padding-left: 40px;
+}
+
+#ol31,#ol32,#ol33,#ol34,#ol35{
+
+    padding-left: 40px;
+}
+
+#ol37,#ol38,#ol39,#ol40,#ol41{
+
+    padding-left: 40px;
+}
+
+#ol43,#ol44,#ol45,#ol46,#ol47{
+
+    padding-left: 40px;
+}
+
+
+
+#ol7,#ol8,#ol9{
+
+    padding-left: 5px;
+}
+
+#enviar-botom{
+
+    margin-left: 57rem;
+    margin-top: 20px;
+}
+
+#pading-container{
+    
+    padding-left:400px
+}

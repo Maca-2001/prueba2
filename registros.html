@@ -1,54 +1,460 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Pagina Fuas</title>
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
 
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Registros</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+    integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+  <link rel="stylesheet" href="static/css/registros.css">
+  <!-- Latest compiled and minified JQuery with Ajax -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
+  <script src="static/js/jquery.rut.chileno.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $("#basic-form").validate();
+    });
+  </script>
 
-  </head>
-  <body>
+  <script type="text/javascript">
+    $(document).ready(function () {
+
+      $("#error").hide();
+
+      $("#basic-form").submit(function () {
+
+        var mensaje = "";
+
+        if ($("#comentario").val().trim().length < 50) {
+
+          mensaje = "el campo esta en blanco, por favor ingrese un valor correcto";
+        }
+
+        if (mensaje != "") {
+          $("#error").html(mensaje);
+          $("#error").show();
+        }
+        if (mensaje < 50) {
+          $("#error").hide();
+        }
+
+      });
+    });
+  </script>
+
+  <script type="text/javascript">
+    jQuery(document).ready(function ($) {
+      $('.input_rut').rut();
+    });
+  </script>
+
+</head>
+
+<body>
+
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="registros.html">
-          <img src="https://mifinanzapersonal.com/wp-content/uploads/2021/01/Logo_del_Ministerio_de_Educacion_Chile.jpg" width="200" height="150px" alt=""> 
-          </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarScroll">
-            <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
-              <li class="nav-item">
-                <a href="home.html"class="nav-link active" aria-current="page" href="#">Inicio Sesion</a>
-              </li>
-              <li class="nav-item">
-                <a href="informacion.html"class="nav-link" href="#">Informacion</a>
-              </li>
-              <li class="nav-item">
-                <a href="registros.html" class="nav-link" href="#">Registros</a>
-              </li>
-              <li class="nav-item">
-                <a href="preguntas frecuentes.html"class="nav-link" href="#">Preguntas Frecuentes</a>
-              </li>
-              <li class="nav-item">
-                <a href="index.html" class="nav-link" href="#">Contactanos</a>
-              </li> 
+      <div id="pading-container" class="container-fluid">
+        <a class="navbar-brand" href="informacion.html">
+          <img id="logo"
+            src="https://mifinanzapersonal.com/wp-content/uploads/2021/01/Logo_del_Ministerio_de_Educacion_Chile.jpg"
+            width="150" height="120px" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+          aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarScroll">
+          <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Inicio Sesion</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Informacion</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Registros</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Preguntas Frecuentes</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contactanos</a>
+            </li>
+            <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
+              <input type="search" class="form-control form-control-dark" placeholder="Buscar...">
+            </form>
+            <div class="text-end">
+              <button type="button" class="btn btn-danger">Buscar</button>
+            </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <form id="basic-form" action="" method="post">
+    <div class="container" id="fondo">
+
+      <h3>FORMULARIO</h3>
+      <h4>Datos alumno</h1>
+        <div class="row " id="margen">
+          <div class="col-4 border bg-light">
+            <p>
+              <label id="text-14" for="estadocivil">Estado civil: </label>
+              <select name="estadocivil" required>
+                <option value="">Seleccionar</option>
+                <option value="1">soltero</option>
+                <option value="2">Casado</option>
+              </select>
+            </p>
+          </div>
+          <div class="col border bg-light">
+            <p>
+              <label id="text-15" for="nacionalidad">Nacionalidad: </label>
+              <input id="nacionalidad" name="nacionalidad" type="text" required>
+            </p>
+          </div>
+          <div class="col border bg-light">
+            <p>
+              <label id="text-16" for="actividad">Actividad: </label>
+              <input id="actividad" type="text" name="actividad" required>
+            </p>
           </div>
         </div>
-      </nav>
+    </div>
+
+    <div class="container" id="fondo">
+      <div class="row " id="margen">
+        <div class="col-3 border bg-light">
+          <p>
+            <label id="label" for="media">¿Cursaste los 2 ultimos años de enseñanza escolar en el extranjero?:
+            </label>
+            <br><br>
+          <div class="row" id="margen-radio">
+            <div class="col-6">
+              <input type="radio" id="OPTION" name="identificacion" value="OPTION">
+              <label id="OPTION" for="si">SI</label>
+            </div>
+            <div class="col-6">
+              <input type="radio" id="OPTION" name="identificacion" value="OPTION">
+              <label id="OPTION" for="no">NO</label>
+            </div>
+          </div>
+          </p>
+
+          </p>
+        </div>
+        <div class="col-3 border bg-light">
+          <p>
+            <label id="label2" for="media">¿tienes alguna discapacidad?: </label>
+            <br><br>
+          <div class="row" id="margen-radio">
+            <div class="col-6">
+              <input type="radio" id="OPTION" name="identificacion" value="OPTION">
+              <label id="OPTION" for="si">SI</label>
+            </div>
+            <div class="col-6">
+              <input type="radio" id="OPTION" name="identificacion" value="OPTION">
+              <label id="OPTION" for="no">NO</label>
+            </div>
+          </div>
+          </p>
+
+          </p>
+        </div>
+        <div class="col border bg-light">
+          <p>
+            <label for="text">¿A que pueblo originario perteneces?:</label>
+            <br><br>
+            <textarea name="comentario" id="comentario" cols="35" rows="6"></textarea>
+          <div id="error" class="alert alert-danger" role="alert"></div>
+          </p>
+        </div>
+        <div class="col border bg-light">
+          <p>
+            <label for="media">Cuenta de ahorro para estudios en Educacion Superior: </label>
+            <br><br>
+          <div class="row" id="margen-radio">
+            <div class="col-6">
+              <input type="radio" id="OPTION" name="identificacion" value="OPTION">
+              <label id="OPTION" for="si">SI</label>
+            </div>
+            <div class="col-6">
+              <input type="radio" id="OPTION" name="identificacion" value="OPTION">
+              <label id="OPTION" for="no">NO</label>
+            </div>
+          </div>
+          </p>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="container" id="fondo">
+      <h4>Antecedentes Academicos</h1>
+        <div class="row " id="margen">
+          <div class="col border bg-light">
+            <p>
+              <label id="text-1" for="antecedentes-1">Promedio notas enseñanza media </label>
+              <input id="rec-1" name="antecedentes" type="number" required>
+            </p>
+          </div>
+          <div class="col border bg-light">
+            <p>
+              <label id="text-2" for="antecedentes-2">Institucion de educacion superior: </label>
+              <input id="rec-2" type="text" name="antecedentes2" required>
+            </p>
+          </div>
+          <div class="col border bg-light">
+            <p>
+              <label id="text-3" for="antecedentes3">Ultimo año de matricula Ed. Superior: </label>
+              <input id="rec-3" type="text" name="antecedentes3" required>
+            </p>
+          </div>
+        </div>
+    </div>
 
 
 
+    <div class="container" id="fondo">
+      <h4>Integrantes grupo familiar</h1>
+        <div id="marg" class="bg-light">
+          <table>
+            <tr>
+              <th class="TB">Nombres</th>
+              <th class="TB">Apellido Paterno</th>
+              <th class="TB">Apellido Materno</th>
+              <th class="TB">Rut</th>
+              <th class="TB">Estado civil</th>
+              <th class="TB">Edad</th>
+            </tr>
+            <tr>
+              <td><input id="ol1" name="OP1" type="text" required></td>
+              <td><input id="ol2" name="OP2" type="text" required></td>
+              <td><input id="ol3" name="OP3" type="text" required></td>
+              <td><input id="rut-1" name="rut-1" type="text" class="input_rut"></td>
+              <td><input id="ol5" name="Op5" type="text" required></td>
+              <td><input id="ol6" name="OP6" type="number" required></td>
+            </tr>
+            <tr>
+              <td><input id="ol7" name="OP7" type="text" required></td>
+              <td><input id="ol8" name="OP8" type="text" required></td>
+              <td><input id="ol9" name="OP9" type="text" required></td>
+              <td><input id="rut-2" name="rut-2" type="text" class="input_rut"></td>
+              <td><input id="ol11" name="OP11" type="text" required></td>
+              <td><input id="ol12" name="OP12" type="number" required></td>
+            </tr>
+            <tr>
+              <td><input id="ol13" name="OP13" type="text" required></td>
+              <td><input id="ol14" name="OP14" type="text" required></td>
+              <td><input id="ol15" name="OP15" type="text" required></td>
+              <td><input id="rut-3" name="rut-3" type="text" class="input_rut"></td>
+              <td><input id="ol17" name="OP17" type="text" required></td>
+              <td><input id="ol18" name="OP18" type="number" required></td>
+            </tr>
+            <tr>
+              <td><input id="ol19" name="OP19" type="text" required></td>
+              <td><input id="ol20" name="OP20" type="text" required></td>
+              <td><input id="ol21" name="OP21" type="text" required></td>
+              <td><input id="rut-4" name="rut-4" type="text" class="input_rut"></td>
+              <td><input id="ol23" name="OP23" type="text" required></td>
+              <td><input id="ol24" name="OP24" type="number" required></td>
+            </tr>
 
-          
-      
 
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-  </body>
+          </table>
+        </div>
+    </div>
+
+
+
+    <div class="container" id="fondo">
+      <h4>Integrantes grupo familiar</h1>
+        <div id="marg" class="bg-light">
+          <table class="col-12">
+            <tr>
+              <th class="TB">Parentesco</th>
+              <th class="TB">Prevision</th>
+              <th class="TB">Prevision salud</th>
+              <th class="TB">Actividad</th>
+              <th class="TB">Nivel de estudios</th>
+
+            </tr>
+            <tr>
+              <td><input id="ol25" name="OP25" type="text" required></td>
+              <td><input id="ol26" name="OP26" type="text" required></td>
+              <td><input id="ol27" name="OP27" type="text" required></td>
+              <td><input id="ol28" name="OP28" type="text" required></td>
+              <td><input id="ol29" name="Op29" type="text" required></td>
+              
+            </tr>
+            <tr>
+              <td><input id="ol31" name="OP31" type="text" required></td>
+              <td><input id="ol32" name="OP32" type="text" required></td>
+              <td><input id="ol33" name="OP33" type="text" required></td>
+              <td><input id="ol34" name="OP34" type="text" required></td>
+              <td><input id="ol35" name="OP35" type="text" required></td>
+             
+            </tr>
+            <tr>
+              <td><input id="ol37" name="OP37" type="text" required></td>
+              <td><input id="ol38" name="OP38" type="text" required></td>
+              <td><input id="ol39" name="OP39" type="text" required></td>
+              <td><input id="ol40" name="OP40" type="text" required></td>
+              <td><input id="ol41" name="OP41" type="text" required></td>
+             
+            </tr>
+            <tr>
+              <td><input id="ol43" name="OP43" type="text" required></td>
+              <td><input id="ol44" name="OP44" type="text" required></td>
+              <td><input id="ol45" name="OP45" type="text" required></td>
+              <td><input id="ol46" name="OP46" type="text" required></td>
+              <td><input id="ol47" name="OP47" type="text" required></td>
+           
+            </tr>
+
+
+          </table>
+        </div>
+    </div>
+
+
+
+    <div class="container" id="fondo">
+      <h4>Direccion del grupo familiar</h1>
+        <div class="row " id="margen">
+          <div class="col border bg-light">
+            <p>
+              <label id="text-4" for="direccion">Direccion: </label>
+              <input id="rec-4" name="direccion" type="text" required>
+            </p>
+          </div>
+          <div class="col border bg-light">
+            <p>
+              <label id="text-5" for="numero">Numero: </label>
+              <input id="rec-5" name="numero" type="number" required>
+            </p>
+          </div>
+          <div class="col border bg-light">
+            <p>
+              <label id="text-6" for="departamento">Departamento: </label>
+              <input id="rec-6" type="text" name="departamento" required>
+            </p>
+          </div>
+        </div>
+    </div>
+
+
+
+    <div class="container" id="fondo">
+      <h4>Direccion del grupo familiar</h1>
+        <div class="row " id="margen2">
+          <div id="recuadro3" class="col-3 border bg-light">
+            <p>
+              <label id="text-7" for="villa">Villa: </label>
+              <input id="re-7" name="villa" type="text" required>
+            </p>
+          </div>
+          <div id="recuadro3" class="col-3 border bg-light">
+            <p>
+              <label id="text-8" for="region">Region: </label>
+              <input id="rec-8" name="region" type="text" required>
+            </p>
+          </div>
+          <div id="recuadro3" class="col-3 border bg-light">
+            <p>
+              <label id="text-9" for="comuna">Comuna: </label>
+              <input id="rec-9" type="text" name="comuna" required>
+            </p>
+          </div>
+          <div id="recuadro3" class="col-3 border bg-light">
+            <p>
+              <label id="text-10" for="ciudad">Ciudad: </label>
+              <input id="rec-10" type="text" name="ciudad" required>
+            </p>
+          </div>
+        </div>
+    </div>
+
+
+
+    <div class="container" id="fondo">
+      <h4>Telefonos</h1>
+        <div class="row " id="margen">
+          <div class="col border bg-light">
+            <p>
+              <label id="text-11" for="codigo">Codigo de area: </label>
+              <input id="rec-11" name="codigo" type="text" required>
+            </p>
+          </div>
+          <div class="col border bg-light">
+            <p>
+              <label id="text-12" for="telefono">Telefono fijo: </label>
+              <input id="rec-12" name="telefono" type="number" >
+            </p>
+          </div>
+          <div class="col border bg-light">
+            <p>
+              <label id="text-13" for="celular">Celular: </label>
+              <input id="rec-13" type="number" name="celular" >
+            </p>
+          </div>
+        </div>
+    </div>
+    <p>
+      <input id="enviar-botom" class="submit text-danger mb-5" type="submit" value="ENVIAR">
+    </p>
+  </form>
+
+      <!-- Footer/Pie de pagina con contactos -->
+      <div id="PIE-PAGINA">
+        <footer class="bg-danger text-center text-white">
+           
+            <div class="container p-4">
+
+                <section class="mb-4">
+                    <p>
+                        Sitio desarrollado por alumnos de DUOC UC
+                    </p>
+                </section>
+
+                <section class="">
+
+                    <div class="row">
+
+                        <div class="col-12">
+                            <h5 class="text-uppercase">Contacto JUNAEB</h5>
+
+                            <ul class="list-unstyled mb-0">
+                                <li>
+                                    <a href="#!" class="text-white text-center text-decoration-none"> Contacto:
+                                        +56923451212 </a>
+                                </li>
+                                <li>
+                                    <a href="#!" class="text-white text-center text-decoration-none">Email:
+                                        FuasJNEB@gmail.com </a>
+                                </li>
+                                <li>
+                                    <a href="#!" class="text-white text-center text-decoration-none"> Facebook:
+                                        JUNAEB-FUAS </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </section>
+
+            </div>
+
+            <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+                Sitio desarrollado por alumnos de Duoc UC
+            </div>
+        </footer>
+    </div>
+
+</body>
+
 </html>

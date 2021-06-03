@@ -7,42 +7,50 @@
     <title>Pagina Fuas</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="static/css/home.css">
 
 
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="home.html">
-          <img src="https://mifinanzapersonal.com/wp-content/uploads/2021/01/Logo_del_Ministerio_de_Educacion_Chile.jpg" width="200" height="150px" alt=""> 
-          </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarScroll">
-            <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
-              <li class="nav-item">
-                <a href="home.html" class="nav-link active" aria-current="page" href="#">Inicio</a>
-              </li>
-              <li class="nav-item">
-                <a href="informacion.html"class="nav-link" href="#">Informacion</a>
-              </li>
-              <li class="nav-item">
-                <a href="registros.html" class="nav-link" href="#">Registros</a>
-              </li>
-              <li class="nav-item">
-                <a href="preguntas frecuentes.html" class="nav-link" href="#">Preguntas Frecuentes</a>
-              </li>
-              <li class="nav-item">
-                <a href="contactanos.html"class="nav-link" href="#">Contactanos</a>
-              </li> 
-              <li class="nav-item">
-                <a href="index.html"class="nav-link" href="#">Inicio sesion</a>
-              </li> 
+      <div id="pading-container" class="container-fluid">
+        <a class="navbar-brand" href="informacion.html">
+          <img id="logo"
+            src="https://mifinanzapersonal.com/wp-content/uploads/2021/01/Logo_del_Ministerio_de_Educacion_Chile.jpg"
+            width="150" height="120px" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+          aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarScroll">
+          <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Inicio Sesion</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Informacion</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Registros</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Preguntas Frecuentes</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contactanos</a>
+            </li>
+            <form id="buscador" class="">
+              <input type="search" class="form-control form-control-dark" placeholder="Buscar...">
+            </form>
+            <div id="" class="text-end ">
+              <button type="button" class="btn btn-danger">Buscar</button>
             </div>
         </div>
-      </nav> 
+      </div>
+    </nav>
+
+    <div class="container">
       <h2 class="titulo">BIENVENIDO AL SITIO WEB OFICIAL DEL FORMULARIO ÚNICO DE ACREDITACIÓN SOCIOECONÓMICA
         (FUAS)
     </h2>
@@ -103,13 +111,56 @@
         </div>
         <br>
     </div>
-    </div>
-    </div>
-</body></center>
-      
+      <div class="container">
         <h5>IMPORTANTE: 
         A partir del proceso de entrega de beneficios para el año 2021, los postulantes que no califiquen para gratuidad por su nivel socioeconómico y que deseen acceder al cobro del arancel reajustado, podrán solicitaro a las instituciones de Educación Superior adscritas a esta política, presentando su certificado de Registro Social de Hogares (RSH, www.registrosocial.gob.cl).</h5>
-   <!-- Optional JavaScript; choose one of the two! -->
+          </div>
+          <div id="PIE-PAGINA">
+            <footer class="bg-danger text-center text-white">
+        
+              <div class="container p-4">
+        
+                <section class="mb-4">
+                  <p>
+                    Sitio desarrollado por alumnos de DUOC UC
+                  </p>
+                </section>
+        
+                <section class="">
+        
+                  <div class="row">
+        
+                    <div class="col-12">
+                      <h5 class="text-uppercase">Contacto JUNAEB</h5>
+        
+                      <ul class="list-unstyled mb-0">
+                        <li>
+                          <a href="#!" class="text-white text-center text-decoration-none"> Contacto:
+                            +56923451212 </a>
+                        </li>
+                        <li>
+                          <a href="#!" class="text-white text-center text-decoration-none">Email:
+                            FuasJNEB@gmail.com </a>
+                        </li>
+                        <li>
+                          <a href="#!" class="text-white text-center text-decoration-none"> Facebook:
+                            JUNAEB-FUAS </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+        
+                </section>
+        
+              </div>
+        
+              <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+                Sitio desarrollado por alumnos de Duoc UC
+              </div>
+            </footer>
+          </div>
+        <!-- Optional JavaScript; choose one of the two! -->
+
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"

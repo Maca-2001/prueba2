@@ -1,0 +1,67 @@
+/* nos faltaba poco tiempo asi que esta fue la unica manera que se me ocurrio para hacer los padding*/ 
+
+#A{
+
+    width: 100%;
+    
+  
+}
+#a{
+
+    width: 118.6%;
+
+}
+#B{
+    width: 100%;
+}
+#b{
+
+    width: 200%;
+
+}
+
+#b{
+
+    width: 100%;
+  
+}
+
+#C{
+
+    width: 100%;
+}
+#D{
+
+    width: 100%;
+  
+}
+#E{
+
+    width: 100%;
+  
+}
+#F{
+
+    width: 100%;
+  
+}
+#G{
+
+    width: 100%;
+  
+}
+#H{
+
+    width: 100%;
+  
+}
+
+h1{
+    text-align: center;
+    margin-top: 60px;
+}
+
+#pading-container{
+    
+    padding-left:390px
+}
